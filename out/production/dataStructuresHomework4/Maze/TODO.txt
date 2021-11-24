@@ -1,0 +1,16 @@
+Problem:
+- The aim of this assignment is to use recursion and backtracking to find a path through a maze.
+  If you are attempting to walk through a maze, you will probably walk down a path as far as you
+  can go. Eventually, you will reach your destination or you won’t be able to go any farther. If you
+  can’t go any farther, you will need to consider alternative paths. Therefore we need to be able
+  to systematically perform trial and error search. Backtracking is a way for doing just this. It is a
+  systematic, nonrepetitive approach to trying alternative paths and eliminating them if they don’t
+  work. Recursion allows you to implement backtracking in a relatively straightforward manner.
+  Each activation frame is used to remember the choice that was made at that particular decision
+  point. After returning from a recursive call you can perform other recursive calls to try out different paths
+
+
+
+ High level:
+ - Use recursion to try different paths.
+    - If the path is not valid, eliminate it.
