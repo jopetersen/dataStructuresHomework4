@@ -1,3 +1,14 @@
+/*
+ * Author: Jordan Petersen
+ * Class; Data Structures
+ * Assignment: Homework 4
+ * Last modified: 11/25
+ * 
+ * 
+ * 
+ */
+
+
 package Maze;
 
 import java.awt.BorderLayout;
@@ -106,5 +117,34 @@ public class MazeTest extends JFrame implements GridColors {
         } else {
             JOptionPane.showMessageDialog(null, "No path - reset maze and try again");
         }
+
+        //TODO  Test all findAllMazePaths && findMazePathMin
+     }
+    
+
+    	
+    	/*
+    	Maze.solve();
+    	if(cellBeingAnalyzed == outsideTheGrid) {
+    		
+    		return false;
+    	} else if(cellBeingAnalyzed != NON_BACKGROUND) {
+    		return false;
+    		
+    	} else if(cellBeingAnalyzed == exitCell){
+    		//TwoDimGrid.recolor(int x,int y); //
+    		return true;
+    	}	
+    	else {
+
+    		
+    		
+    	}
+    	*/
+    	
+	
     }
-}
+    
+    
+    
+

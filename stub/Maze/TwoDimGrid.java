@@ -1,3 +1,13 @@
+/*
+ * Author: Jordan Petersen
+ * Class; Data Structures
+ * Assignment: Homework 4
+ * Last modified: 11/25
+ * 
+ * 
+ * 
+ */
+
 package Maze;
 
 import java.awt.Color;
@@ -16,6 +26,8 @@ import javax.swing.JPanel;
  * @author Koffman and Wolfgang
  **/
 public class TwoDimGrid extends JPanel implements GridColors {
+
+    // will not need to modify this
 
     // Data Fields
     /** Prefered button size */
@@ -102,7 +114,7 @@ public class TwoDimGrid extends JPanel implements GridColors {
      * to the elements of the given array with the value 1
      * @param bitMap - An array of 0's and 1's the same size as the grid
      * @param aColor - The color to be set
-     * @throws ArrayIndexOutOfBounds if the array size and the
+     * @throws //ArrayIndexOutOfBounds if the array size and the
      *         grid size differ  */
     public void recolor(char[][] bitMap, Color aColor) {
         for (int i = 0; i != bitMap.length; ++i) {

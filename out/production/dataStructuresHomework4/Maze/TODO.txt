@@ -14,3 +14,75 @@ Problem:
  High level:
  - Use recursion to try different paths.
     - If the path is not valid, eliminate it.
+ - modify class Maze
+ - The method you have to implement is public boolean findMazePath(int x, int y). Also, you
+shall be asked to implement some variations of this algorithm, each of which will result
+in a new method. The details of these methods are described in Sec. 3 together with
+a description of other methods of this class that you will need.
+ 	-  implement variations of the algorithm as well
+ 	
+ - MazeTest - Graphica linterface to test the algo - this is the main method
+  - main method asks for the size of the grid, displays initial grid
+   - allows you to edit it in order to indicate which cells are potentially considered a part of the path.
+   
+Problems
+
+	Problem 1:   
+	   - implement a recursive algo public boolean findMazePath(int x, int y) that 
+	    - returns true if a path is found
+	    - method calls Maze.findMazePath, which calls the algo
+	    - with x and y, both set to 0
+	    • If the current cell being analyzed falls outside the grid, then false should be returned
+			since there is no possible path through that cell.
+		- If the current cell being analyzed does not have NON_BACKGROUND, then false should
+			be returned since there is no possible path through that cell. To determine the color
+			of a cell use getColor(int x, int y) of the class TwoDimGrid, which is the type of the data field
+			maze.
+		• If the current cell being analyzed is the exit cell, then
+			-  Cell must be painted color PATH (using recolor method from twodimgrid)
+			- Return true
+		Otherwise current cell is assumed to be part of the path
+			- painted color path
+			Each of the 4 neighboring cells must be explored to see if they
+			too are a part of a path (which is here recursion takes place)
+			If result of exploring is successful, then a path has been found
+			otherwise, cell is not part of the path - it's a dead end
+			Must be marked so that it is not visited again, so color must be set to temporary
+			
+	Problem 2: 
+		- implement a recursive algorithm 
+			public ArrayList<ArrayList<PairInt>> findAllMazePaths(int x, int y) 
+				modifies solution to problem 1 so that a list of all of the solutions
+				are returend. Each solution may be represented as a list of coordinates
+				if no solutions, resulting list should have empty list as only element
+			Also define PairInt, which encodes pairs of integers that represent coordinates
+				- 
+				
+
+	Problem 3
+		- Adapt boolean Maze.findMazePath() so that it returns the shortest path in the list of
+			paths. resulting method should be called
+			- public ArrayList<PairInt> findMazePathMin(int x, int y);
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

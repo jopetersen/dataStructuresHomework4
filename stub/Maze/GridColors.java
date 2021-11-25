@@ -1,3 +1,13 @@
+/*
+ * Author: Jordan Petersen
+ * Class; Data Structures
+ * Assignment: Homework 4
+ * Last modified: 11/25
+ * 
+ * 
+ * 
+ */
+
 package Maze;
 
 import java.awt.Color;
