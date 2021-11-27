@@ -10,6 +10,9 @@
 
 package Maze;
 
+import java.util.ArrayList;
+import java.util.Stack;
+
 /**
  * Class that solves maze problems with backtracking.
  * @author Koffman and Wolfgang
@@ -41,9 +44,10 @@ public class Maze implements GridColors {
 
     // Problem # 1 starts here
     public boolean findMazePath(int x, int y) {
-        //first need to check if the inputs are valid -- they cannot have a negative amount of rows or columns
-    	// also need to check if the existing rows/columns are valid
+       
     	
+    	// first need to check if the inputs are valid -- they cannot have a negative amount of rows or columns
+    	// also need to check if the existing rows/columns are valid
     	
         if ((x < 0 ||  y < 0) ||  maze.getNRows() < 0 || maze.getNCols() < 0 ) { 
 
@@ -100,39 +104,91 @@ public class Maze implements GridColors {
         	
     }
     
-
-
-
-        // also check if the current cell being analyzed is the exit cell, paint color path using
-        	//	recolor
-        	// return true
-        
-        
-        // otherwise cell is assumed to be part of the path
-        
-        // calls the wrapper method Maze.findMazePath()
-
-
-
-        // return true if a path is found after clicking solve
-
-        // current cell is part of path
-
-        //paint color PATH
-        //explore each neighbor to determine if they're part of a path
-
-        // USE RECURSION HERE, 1 call/neighbor
-        // If exploring at least one of the neighbor is successful,
-        // path == solved, otherwise it's a dead end
-
-        // change color to temporary
-
-
-    // ADD METHOD FOR PROBLEM 2 HERE
+   
+    //------ Problem 2------
+    
+    // create a recursive algo
+	    // Problem 2 -- implement a recursive algorithm by modifying the solution to return the list of all solutions that 
+		// solve the maze. if no solutions, resulting list should be empty list as the only element
+		// also need to define PairInt with the following:
+    
+    public ArrayList<ArrayList<PairInt>> findAllMazePaths(int x, int y){
+		return null;
+    	
+    	
+    	
+    	 
+    }
+    
+    
+    /* Stack classes - Java (first time!)
+     * Reference link: https://www.geeksforgeeks.org/stack-class-in-java/
+     * 
+     * */	
+   
+    
+    
+    // ----- Helper Methods for findAllMazePaths----- 
+	public void findMazePathStackBased (int x, int y, ArrayList<ArrayList<PairInt>> result, Stack<PairInt> trace) {
+		// create a new ArrayList to build a stack off of
+		
+		
+		// error checks - will need to determine if we're at the end node or have invalid inputs, which would be negative
+		
+		
+		if (x < 0 || y < 0 || y > maze.getNCols() -1 || x >  maze.getNRows() -1) {
+			System.out.println("Coordinates are invalid");
+			return;// stop the rest of the function from executing
+			} else if ( y == maze.getNCols() -1 && x == maze.getNRows() -1) { // coordinates are in bound
+				
+				
+				
+				
+				
+				
+			} 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		// Stack ZyBook: https://learn.zybooks.com/zybook/STEVENSCS570PeyrovianFall2021/chapter/5/section/1?content_resource_id=49817874
+		
+		// Stack.push puts an item oto the top of the stack
+		
+		
+		
+		// check to see if an exit is found - if it is, send a trace/add to the result var
+		
+		// we know that the exit point is the cell getNCols()-1 && getNRows()-1
+		
+		
+		
+		
+	//	ArrayList<ArrayList<PairInt>> result = new ArrayList<>();
+		
+		// x & y are coordinates being visited by the program
+		
+		// result is list of successful paths recorded up to now
+		// trace is the trace of the current path being explored
+		
+		 
+		
+		
+		
+		
+	}
+ 
     
     // ADD METHOD FOR PROBLEM 3 HERE
     
-
+    
+    //public ArrayList<PairInt> findMazePathMin()
+    
     /*<exercise chapter="5" section="6" type="programming" number="2">*/
     public void resetTemp() {
         maze.recolor(TEMPORARY, BACKGROUND);
